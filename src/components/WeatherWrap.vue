@@ -1,12 +1,24 @@
 <template>
-  <div>
-    {{ this.allWeather.name }},
-
-    {{ this.allWeather.sys.country }}
-
-    {{ dateBuilder() }}
-    {{ Math.round(this.allWeather.main.temp) }}
-    {{ this.allWeather.weather[0].main }}
+  <div class="weather-wrap">
+    <div class="city-country">
+      {{ this.allWeather.name }}, {{ this.allWeather.sys.country }}
+    </div>
+    <div class="date">{{ dateBuilder() }}</div>
+    <div class="temperature">{{ Math.round(this.allWeather.main.temp) }}</div>
+    <div class="weather">{{ this.allWeather.weather[0].main }}</div>
+    <i
+      v-if="this.allWeather.weather[0].main == 'Clouds'"
+      class="fas fa-cloud"
+    />
+    <i
+      v-if="this.allWeather.weather[0].main == 'Rain'"
+      class="fas fa-cloud-rain"
+    />
+    <i
+      v-if="this.allWeather.weather[0].main == 'Snow'"
+      class="fas fa-snowflake"
+    />
+    <i v-if="this.allWeather.weather[0].main == 'Clear'" class="fas fa-sun" />
   </div>
 </template>
 
@@ -51,4 +63,17 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.weather-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 70vh;
+}
+
+.weather-wrap i {
+  font-size: 5em;
+  color: antiquewhite;
+}
+</style>
