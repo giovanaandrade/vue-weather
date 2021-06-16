@@ -1,12 +1,14 @@
 <template>
   <div class="search-box">
-    <input
-      type="text"
-      class="search-bar"
-      placeholder="Search city"
-      v-model="query"
-      @keyup.enter="fetchWeather(query)"
-    />
+    <label for="search">
+      <input
+        name="search"
+        type="text"
+        class="search-bar"
+        placeholder="Search city"
+        v-model="query"
+        @keyup.enter="fetchWeather(query)"
+    /></label>
   </div>
 </template>
 
@@ -30,9 +32,20 @@ export default {
 .search-box {
   width: 100%;
 }
+
 .search-bar {
   width: 100%;
-  height: 5vh;
-  border-radius: 5px;
+  background: none;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: solid;
+  border-left-style: none;
+  padding: 0.5rem;
+  transition: 0.8s;
+}
+
+.search-bar:focus {
+  background-color: antiquewhite;
+  border: solid;
 }
 </style>

@@ -19,7 +19,7 @@ const state = {
     ],
     base: "stations",
     main: {
-      temp: 282.55,
+      temp: 28.55,
       feels_like: 281.86,
       temp_min: 280.37,
       temp_max: 284.26,

@@ -4,7 +4,9 @@
       {{ this.allWeather.name }}, {{ this.allWeather.sys.country }}
     </div>
     <div class="date">{{ dateBuilder() }}</div>
-    <div class="temperature">{{ Math.round(this.allWeather.main.temp) }}</div>
+    <div class="temperature">
+      {{ Math.round(this.allWeather.main.temp) }} °C
+    </div>
     <div class="weather">{{ this.allWeather.weather[0].main }}</div>
     <i
       v-if="this.allWeather.weather[0].main == 'Clouds'"
@@ -73,7 +75,11 @@ export default {
 }
 
 .weather-wrap i {
-  font-size: 5em;
+  font-size: 5rem;
   color: antiquewhite;
+}
+
+.temperature {
+  font-size: 3rem;
 }
 </style>
