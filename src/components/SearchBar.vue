@@ -7,7 +7,7 @@
         class="search-bar"
         placeholder="Search city"
         v-model="query"
-        @keyup.enter="fetchWeather(query)"
+        @keyup.enter="onSubmit(query)"
     /></label>
   </div>
 </template>
@@ -19,6 +19,9 @@ export default {
   name: "SearchBar",
   methods: {
     ...mapActions(["fetchWeather"]),
+    onSubmit(query) {
+      this.$router.push({ name: "Weather", query: query.toString() });
+    },
   },
   data() {
     return {

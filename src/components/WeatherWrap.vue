@@ -7,6 +7,7 @@
     <div class="temperature">
       {{ Math.round(this.allWeather.main.temp) }} °C
     </div>
+
     <div class="weather">{{ this.allWeather.weather[0].main }}</div>
     <i
       v-if="this.allWeather.weather[0].main == 'Clouds'"
