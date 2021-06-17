@@ -1,11 +1,14 @@
-# Vue Weather
+# Vue Weather App
 
-A Vue.JS project to show weather using [Open Weather API](https://openweathermap.org/api)
+A Weather App developed with [Vue.JS](https://vuejs.org/) and [Open Weather API](https://openweathermap.org/api) :sunny: :umbrella: :cloud:
+
+Check it out at [giovanaandrade.github.io/vue-weather](https://giovanaandrade.github.io/vue-weather/)
 
 ## Technologies
 
 * [Vue.JS](https://vuejs.org/)
 * [Vuex](https://vuex.vuejs.org/)
+* [Vue Router](https://router.vuejs.org/)
 
 ## Project setup
 ```

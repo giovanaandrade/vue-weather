@@ -1,23 +1,12 @@
 <template>
-  <main>
-    <div class="container">
-      <SearchBar />
-      <WeatherWrap />
-    </div>
-  </main>
+  <div id="nav"><router-link to="/">Home</router-link></div>
+
+  <router-view v-slot="{ Component }">
+    <transition name="page">
+      <component :is="Component" />
+    </transition>
+  </router-view>
 </template>
-
-<script>
-import SearchBar from "./components/SearchBar.vue";
-import WeatherWrap from "./components/WeatherWrap.vue";
-import { mapGetters } from "vuex";
-
-export default {
-  name: "App",
-  components: { SearchBar, WeatherWrap },
-  computed: mapGetters(["allWeather"]),
-};
-</script>
 
 <style>
 * {
@@ -36,18 +25,12 @@ body {
   );
 }
 
-main {
-  display: flex;
-  justify-content: center;
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s;
 }
-
-.container {
-  padding-top: 3%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vh;
-  height: 100%;
+.page-enter,
+.page-leave-active {
+  opacity: 0;
 }
 </style>
