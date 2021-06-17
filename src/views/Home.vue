@@ -2,7 +2,7 @@
   <main>
     <div class="container">
       <SearchBar />
-      <img src="../assets/weathersun.svg" alt="" />
+      <img src="../assets/weathersun.svg" alt="" class="img-weather" />
     </div>
   </main>
 </template>
@@ -24,8 +24,12 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100vh;
-  height: 100%;
+  justify-content: space-between;
+  width: 50vw;
+}
+
+.img-weather {
+  padding: 5%;
+  height: 50vh;
 }
 </style>

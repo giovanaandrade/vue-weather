@@ -1,6 +1,11 @@
 <template>
   <div id="nav"><router-link to="/">Home</router-link></div>
-  <router-view />
+
+  <router-view v-slot="{ Component }">
+    <transition name="page">
+      <component :is="Component" />
+    </transition>
+  </router-view>
 </template>
 
 <style>
@@ -18,5 +23,14 @@ body {
     rgba(249, 126, 242, 1) 50%,
     rgba(255, 207, 140, 1) 100%
   );
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0;
 }
 </style>

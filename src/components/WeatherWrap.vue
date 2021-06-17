@@ -26,11 +26,20 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 export default {
   name: "WeatherWrap",
   computed: mapGetters(["allWeather"]),
+  data() {
+    return {
+      query: this.$route.params.query,
+    };
+  },
+  created() {
+    this.fetchWeather(this.query);
+  },
   methods: {
+    ...mapActions(["fetchWeather"]),
     dateBuilder() {
       let d = new Date();
       let months = [
