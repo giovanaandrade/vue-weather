@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/weather-vue/" class="link"
+  <router-link to="/vue-weather/" class="link"
     ><i class="fas fa-home"></i
   ></router-link>
 
