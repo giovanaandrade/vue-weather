@@ -8,7 +8,12 @@ const routes = [
     component: Home,
   },
   {
-    path: "/weather/:query",
+    path: "/weather-vue/",
+    name: "Home-weather-vue",
+    component: Home,
+  },
+  {
+    path: "/weather-vue/weather/:query",
     name: "Weather",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
