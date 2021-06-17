@@ -1,5 +1,5 @@
 <template>
-  <div id="nav"><router-link to="/">Home</router-link></div>
+  <div id="nav"><router-link to="/weather-vue/">Home</router-link></div>
 
   <router-view v-slot="{ Component }">
     <transition name="page">
