@@ -2,6 +2,8 @@
 
 A Weather App developed with [Vue.JS](https://vuejs.org/) and [Open Weather API](https://openweathermap.org/api) :sunny: :umbrella: :cloud:
 
+Check it out at [giovanaandrade.github.io/vue-weather](https://giovanaandrade.github.io/vue-weather/)
+
 ## Technologies
 
 * [Vue.JS](https://vuejs.org/)
