@@ -1,5 +1,7 @@
 <template>
-  <div id="nav"><router-link to="/weather-vue/">Home</router-link></div>
+  <router-link to="/weather-vue/" class="link"
+    ><i class="fas fa-home"></i
+  ></router-link>
 
   <router-view v-slot="{ Component }">
     <transition name="page">
@@ -32,5 +34,21 @@ body {
 .page-enter,
 .page-leave-active {
   opacity: 0;
+}
+i {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  i {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+.link {
+  text-decoration: none;
+  color: antiquewhite;
 }
 </style>

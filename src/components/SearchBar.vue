@@ -32,20 +32,21 @@ export default {
 </script>
 
 <style>
-.search-box {
-  width: 100%;
-  padding: 3%;
-}
-
 .search-bar {
-  width: 100%;
   background: none;
   border-top-style: none;
   border-right-style: none;
   border-bottom-style: solid;
   border-left-style: none;
   padding: 0.5rem;
+  width: 50vw;
   transition: 0.8s;
+}
+
+@media only screen and (max-width: 768px) {
+  .search-bar {
+    width: 80vw;
+  }
 }
 
 .search-bar:focus {

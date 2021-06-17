@@ -22,6 +22,7 @@
       class="fas fa-snowflake"
     />
     <i v-if="this.allWeather.weather[0].main == 'Clear'" class="fas fa-sun" />
+    <i v-if="this.allWeather.weather[0].main == 'Fog'" class="fas fa-smog" />
   </div>
 </template>
 

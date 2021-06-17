@@ -15,21 +15,15 @@ export default {
 };
 </script>
 <style>
-main {
-  display: flex;
-  justify-content: center;
-}
 .container {
-  padding-top: 3%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  width: 50vw;
 }
 
 .img-weather {
   padding: 5%;
-  height: 50vh;
+  max-width: 80vw;
+  max-height: 80vh;
 }
 </style>
